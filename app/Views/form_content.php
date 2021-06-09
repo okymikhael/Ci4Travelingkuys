@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta value="<?= $data[0]['banner1']; ?>" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
@@ -84,38 +84,38 @@
         <div class="card-heading">
           <h2 class="title">Content Management</h2>
         </div>
-        <div class="card-body">
-          <form method="POST">
+        <form method="POST" action="/Admin/edit_landing">
+
+          <div class="card-body">
             <div class="form-row">
               <div class="name">Banner 1</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="banner1">
+                <input class="input--style-6" type="text" value="<?= $data[0]['banner1']; ?>" name="banner1">
               </div>
             </div>
             <div class="form-row">
               <div class="name">Banner 2</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="banner2">
+                <input class="input--style-6" type="text" value="<?= $data[0]['banner2']; ?>" name="banner2">
               </div>
             </div>
             <div class="form-row">
               <div class="name">Banner 3</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="banner3">
+                <input class="input--style-6" type="text" value="<?= $data[0]['banner3']; ?>" name="banner3">
               </div>
             </div>
             <div class="form-row">
               <div class="name">Title</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="title1">
+                <input class="input--style-6" type="text" value="<?= $data[0]['title1']; ?>" name="title1">
               </div>
             </div>
             <div class="form-row">
               <div class="name">Content 1</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="content1"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="content1"><?= $data[0]['content1']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -123,8 +123,7 @@
               <div class="name">Content 2</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="content2"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="content2"><?= $data[0]['content2']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -132,8 +131,7 @@
               <div class="name">Content 3</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="content3"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="content3"><?= $data[0]['content3']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -141,8 +139,7 @@
               <div class="name">Service 1</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="service1"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="service1"><?= $data[0]['service1']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -150,8 +147,7 @@
               <div class="name">Service 2</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="service2"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="service2"><?= $data[0]['service2']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -159,8 +155,7 @@
               <div class="name">Service 3</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="service3"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="service3"><?= $data[0]['service3']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -168,8 +163,7 @@
               <div class="name">Service 4</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="service4"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="service4"><?= $data[0]['service4']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -177,8 +171,7 @@
               <div class="name">Service 5</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="service5"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="service5"><?= $data[0]['service5']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -186,8 +179,7 @@
               <div class="name">Service 6</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="service6"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="service6"><?= $data[0]['service6']; ?></textarea>
                 </div>
               </div>
             </div>
@@ -195,41 +187,39 @@
               <div class="name">Contact</div>
               <div class="value">
                 <div class="input-group">
-                  <textarea class="textarea--style-6" name="contact"
-                    ></textarea>
+                  <textarea class="textarea--style-6" name="contact"><?= $data[0]['contact']; ?></textarea>
                 </div>
               </div>
             </div>
             <div class="form-row">
               <div class="name">Phone</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="phone">
+                <input class="input--style-6" type="text" value="<?= $data[0]['phone']; ?>" name="phone">
               </div>
             </div>
             <div class="form-row">
               <div class="name">Email</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="email">
+                <input class="input--style-6" type="text" value="<?= $data[0]['email']; ?>" name="email">
               </div>
             </div>
             <div class="form-row">
               <div class="name">Location</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="location">
+                <input class="input--style-6" type="text" value="<?= $data[0]['location']; ?>" name="location">
               </div>
             </div>
             <div class="form-row">
               <div class="name">Footer</div>
               <div class="value">
-                <input class="input--style-6" type="text" name="Footer">
+                <input class="input--style-6" type="text" value="<?= $data[0]['footer']; ?>" name="footer">
               </div>
             </div>
-
-          </form>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn--radius-2 btn--blue-2" type="submit">Save</button>
-        </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn--radius-2 btn--blue-2" type="submit">Save</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

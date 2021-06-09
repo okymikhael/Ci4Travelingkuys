@@ -5,7 +5,7 @@ class Landing extends Model
 {
     protected $table = 'landing';
     
-    public function getProduct($id = false)
+    public function getLanding($id = false)
     {
         if($id === false){
             return $this->findAll();
@@ -14,19 +14,19 @@ class Landing extends Model
         }   
     }
 
-    public function saveProduct($data)
+    public function saveLanding($data)
     {
         $query = $this->db->table($this->table)->insert($data);
         return $query;
     }
 
-    public function updateProduct($data, $id)
+    public function updateLanding($data, $id)
     {
         $query = $this->db->table($this->table)->update($data, array('id' => $id));
         return $query;
     }
 
-    public function deleteProduct($id)
+    public function deleteLanding($id)
     {
         $query = $this->db->table($this->table)->delete(array('id' => $id));
         return $query;

@@ -5,7 +5,7 @@ class Gallery extends Model
 {
     protected $table = 'galery';
     
-    public function getProduct($id = false)
+    public function getGallery($id = false)
     {
         if($id === false){
             return $this->findAll();
@@ -14,19 +14,19 @@ class Gallery extends Model
         }   
     }
 
-    public function saveProduct($data)
+    public function saveGallery($data)
     {
         $query = $this->db->table($this->table)->insert($data);
         return $query;
     }
 
-    public function updateProduct($data, $id)
+    public function updateGallery($data, $id)
     {
         $query = $this->db->table($this->table)->update($data, array('id' => $id));
         return $query;
     }
 
-    public function deleteProduct($id)
+    public function deleteGallery($id)
     {
         $query = $this->db->table($this->table)->delete(array('id' => $id));
         return $query;

@@ -79,44 +79,23 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">Day</th>
-                            <th scope="col">Article Name</th>
-                            <th scope="col">Author</th>
-                            <th scope="col">Shares</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Alternative</th>
+                            <th scope="col">Image</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach($data as $key => $row):?>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Bootstrap 4 CDN and Starter Template</td>
-                            <td>Cristina</td>
-                            <td>2.846</td>
+                            <th scope="row"><?= $key+1 ?></th>
+                            <td><?= $row['image'];?></td>
+                            <td><img src="/assets/images/<?= $row['image_path'];?>" width="100" alt=""></td>
                             <td>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                <a href="/Admin/edit_galery?id=<?= $row['id'];?>"><button type="submit" class="btn btn-success"><i class="fas fa-edit"></i></button></a>
+                                <a href="/Admin/delete_galery?id=<?= $row['id'];?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Bootstrap Grid 4 Tutorial and Examples</td>
-                            <td>Cristina</td>
-                            <td>3.417</td>
-                            <td>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Bootstrap Flexbox Tutorial and Examples</td>
-                            <td>Cristina</td>
-                            <td>1.234</td>
-                            <td>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
+                        <?php endforeach;?>
                     </tbody>
                 </table>
             </div>
